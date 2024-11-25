@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabric Weight Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Grey Fabric Weight Calculator</h1>
+    <form id="fabricForm">
+      <div class="form-group">
+        <label for="epi">Ends per inch (Read - Number of warp threads per inch of fabric.):</label>
+        <input type="number" id="epi" name="epi" required>
+      </div>
+      <div class="form-group">
+        <label for="ppi">Picks per inch (Pick - Number of weft threads per inch of fabric.):</label>
+        <input type="number" id="ppi" name="ppi" required>
+      </div>
+      <div class="form-group">
+        <label for="width">Width of fabric (in inches - Grey fabric width):</label>
+        <input type="number" id="width" name="width" required>
+      </div>
+      <div class="form-group">
+        <label for="length">Length of fabric (in meters - Total length of the fabric roll.):</label>
+        <input type="number" id="length" name="length" required>
+      </div>
+      <div class="form-group">
+        <label for="warpCount">Warp Yarn Count (Yarn count for warp threads.):</label>
+        <input type="number" id="warpCount" name="warpCount" required>
+      </div>
+      <div class="form-group">
+        <label for="weftCount">Weft Yarn Count (Yarn count for weft threads.):</label>
+        <input type="number" id="weftCount" name="weftCount" required>
+      </div>
+      <button type="button" id="calculateButton">Calculate Weight</button>
+    </form>
+    <div id="result" class="result">
+      <p>Grey Fabric weight: <span id="weight"></span> kg</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
