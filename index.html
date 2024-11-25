@@ -1,21 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fabric Weight Calculator</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input[type="number"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #e9ecef;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #e9ecef;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      color: #6c757d;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
   <div class="container">
     <h1>Grey Fabric Weight Calculator</h1>
     <form id="fabricForm">
       <div class="form-group">
-        <label for="epi">Ends per inch (Read - Number of warp threads per inch of fabric.):</label>
+        <label for="epi">Ends per inch (Read - Number of warp threads per inch of fabric):</label>
         <input type="number" id="epi" name="epi" required>
       </div>
       <div class="form-group">
-        <label for="ppi">Picks per inch (Pick - Number of weft threads per inch of fabric.):</label>
+        <label for="ppi">Picks per inch (Pick - Number of weft threads per inch of fabric):</label>
         <input type="number" id="ppi" name="ppi" required>
       </div>
       <div class="form-group">
@@ -23,15 +104,15 @@
         <input type="number" id="width" name="width" required>
       </div>
       <div class="form-group">
-        <label for="length">Length of fabric (in meters - Total length of the fabric roll.):</label>
+        <label for="length">Length of fabric (in meters - Total length of the fabric roll):</label>
         <input type="number" id="length" name="length" required>
       </div>
       <div class="form-group">
-        <label for="warpCount">Warp Yarn Count (Yarn count for warp threads.):</label>
+        <label for="warpCount">Warp Yarn Count (Yarn count for warp threads):</label>
         <input type="number" id="warpCount" name="warpCount" required>
       </div>
       <div class="form-group">
-        <label for="weftCount">Weft Yarn Count (Yarn count for weft threads.):</label>
+        <label for="weftCount">Weft Yarn Count (Yarn count for weft threads):</label>
         <input type="number" id="weftCount" name="weftCount" required>
       </div>
       <button type="button" id="calculateButton">Calculate Weight</button>
@@ -40,6 +121,14 @@
       <p>Grey Fabric weight: <span id="weight"></span> kg</p>
     </div>
   </div>
+
+  <footer>
+    <p>Developed by: Muhammad Bilal Siddique</p>
+    <p>CEO - Omega AI</p>
+    <p>Contact - 03454001724</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
+
 </html>
